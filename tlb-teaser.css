@@ -1,0 +1,227 @@
+/* Video Background Styles */
+.video-landing-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+        
+#bgVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+        
+/* Poster/Still Image Overlay */
+.video-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+        
+.video-poster.show {
+    opacity: 1;
+}
+        
+/* Main Content Overlay */
+.landing-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 40px;
+    /*min-height: 100vh;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+        
+/* Header Content */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+        
+.broadway-info {
+    max-width: 500px;
+}
+        
+.broadway-info h1 {
+    font-size: 44px;
+    font-family: "Friz Quadrata Std", sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin: 0;
+    padding: 0;    
+}
+
+.broadway-info h1 svg {
+    width: 30px;
+    margin-right: 10px;
+    height: 30px;          
+}
+        
+.broadway-info h2 {
+    font-size: 2.5rem;
+    margin: 0 0 20px 0;
+}
+        
+.broadway-info .theatre {
+    font-size: 2.5rem;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+        
+.theatre-logo {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+        
+.signup-btn {
+    cursor: pointer;
+    background: transparent;
+    box-shadow: none;
+    text-transform: uppercase;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    text-align: center;
+    border-radius: 50px;
+    border-color: #fff;
+    color: #fff;
+    margin: 0;
+    padding: 10px 20px 3px;
+    margin: 0;
+    font-size: 20px;
+    display: inline-block;
+    font-family: "Friz Quadrata Std", sans-serif;         
+}
+        
+.signup-btn:hover {
+    background-color: #9c0000;
+}
+        
+        /* Video Controls */
+.video-controls {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+    align-items: center;
+}
+        
+.control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    font-size: 20px;
+}
+        
+.control-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+        
+        /* Social Icons */
+.social-icons {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+        
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: all 0.5s;
+}
+
+.social-icons a svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s;
+}        
+        
+.social-icons a:hover svg {
+    color: #9c0000;
+}
+        
+/* Icons using Unicode/CSS */
+.icon-play::before { content: "▶"; }
+.icon-pause::before { content: "❚❚"; }
+.icon-mute::before { content: "🔇"; }
+.icon-unmute::before { content: "🔊"; }
+.icon-replay::before { content: "↻"; font-size: 28px; }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .broadway-info h1 {
+        font-size: 2rem;
+    }
+            
+    .broadway-info h2,
+    .broadway-info .theatre {
+        font-size: 1.5rem;
+    }
+            
+    .landing-content {
+        padding: 20px;
+    }
+            
+    .video-controls {
+        bottom: 20px;
+        gap: 15px;
+    }
+            
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+            
+    .social-icons {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+        
+        
