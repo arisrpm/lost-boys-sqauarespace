@@ -1,179 +1,462 @@
-/* Video Background Container */
+.content-wrapper {
+    padding-top: 0 !important;
+}  
+/* Video Background Styles */
 .video-landing-container {
-  position: relative; /* no longer fixed */
-  width: 100%;
-  height: 100%; /* will stretch based on section/parent */
-  overflow: hidden;
-  z-index: 0; /* keep video behind content */
+    position: relative;
+    top: auto;   
+    left: auto;  
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: 0;  
 }
 
 #bgVideo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
 }
+        
+        /* Poster/Still Image Overlay */
+        .video-poster {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            pointer-events: none;
+        }
+        
+        .video-poster.show {
+            opacity: 1;
+        }
+        
+        /* Main Content Overlay */
+        .landing-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            padding: 40px;
+            /*min-height: 100vh;*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* Header Content */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        
+        .broadway-info {
+            max-width: 500px;
+        }
+        
+        .broadway-info h1 {
+            font-size: 44px;
+            font-family: "Friz Quadrata Std", sans-serif;
+            line-height: 1;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: #fff;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            margin: 0;
+            padding: 0;            
+        }
 
-/* Poster/Still Image Overlay */
-.video-poster {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
+        .broadway-info .logos {
+            margin-right: 10px;
+            display: inline-block;
+                position: relative;
+        }
 
-.video-poster.show {
-  opacity: 1;
-}
-
-/* Main Content Overlay */
-.landing-content {
-  position: relative; /* stack above video */
-  z-index: 1;
-  color: white;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.broadway-info {
-  max-width: 500px;
-}
-
-.broadway-info h1 {
-  font-size: 44px;
-  font-family: "Friz Quadrata Std", sans-serif;
-  line-height: 1;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #fff;
-  margin: 0;
-  padding: 0;
-  text-shadow: 0 0 6px #16aac3; /* outer glow */
-}
-
-.broadway-info .logos {
-  margin-right: 10px;
-  display: inline-block;
-  position: relative;
-}
-
-.broadway-info h1 svg {
-  width: 30px;
-  height: 30px;
-  transition: all 0.5s;
-}
-
-.broadway-info h2 {
-  font-size: 2.5rem;
-  margin: 0 0 20px 0;
-}
-
-.broadway-info .theatre {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.signup-btn {
-  cursor: pointer;
-  background: transparent;
-  box-shadow: none;
-  text-transform: uppercase;
-  border-radius: 50px;
-  border: 2px solid #fff;
-  color: #fff;
-  padding: 10px 20px 3px;
-  font-size: 20px;
-  font-family: "Friz Quadrata Std", sans-serif;
-  transition: all 0.3s ease;
-}
-
-.signup-btn:hover {
-  background-color: #9c0000;
-}
-
-/* Video Controls (now positioned inside hero, not fixed) */
-.video-controls {
-  margin-top: 20px;
-  display: flex;
-  gap: 20px;
-  z-index: 2;
-  align-items: center;
-}
-
-.control-btn {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  font-size: 20px;
-}
-
-.control-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.1);
-}
-
-/* Social Icons (now relative to content flow) */
+       .broadway-info h1 svg {
+            width: 30px;
+            height: 30px;
+            transition: all 0.5s;          
+        }
+        
+        .broadway-info h2 {
+            font-size: 2.5rem;
+            margin: 0 0 20px 0;
+        }
+        
+        .broadway-info .theatre {
+            font-size: 2.5rem;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .theatre-logo {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .signup-btn {
+            cursor: pointer;
+            background: transparent;
+            box-shadow: none;
+            text-transform: uppercase;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            text-align: center;
+            border-radius: 50px;
+            border-color: #fff;
+            color: #fff;
+            margin: 0;
+            padding: 10px 20px 3px;
+            margin: 0;
+            font-size: 20px;
+            display: inline-block;
+            font-family: "Friz Quadrata Std", sans-serif;         
+        }
+        
+        .signup-btn:hover {
+            background-color: #9c0000;
+        }
+ 
+        body.modal-open .signup-btn {
+            color: #9c0000;
+            border-color: #9c0000;
+            background: 000;
+        }
+        
+        /* Video Controls */
+      .video-controls {
+          position: absolute;   /* was fixed */
+          bottom: 20px;
+          right: 20px;
+          display: flex;
+          gap: 20px;
+          z-index: 2;
+          align-items: center;
+      }
+        
+        .control-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+        
+        .control-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        
+        /* Social Icons */
 .social-icons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px;
-  z-index: 2;
+    position: absolute;   /* was fixed */
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+        
+        .social-icons a {
+            color: white;
+            font-size: 24px;
+            transition: all 0.5s;
+        }
+
+        .social-icons a svg {
+            width: 30px;
+            height: 30px;
+            transition: all 0.5s;
+        }        
+        
+        .social-icons a:hover svg {
+            color: #9c0000;
+        }
+
+        body.modal-open .social-icons a svg {
+            color: #9c0000;
+        }
+
+        body.modal-open .social-icons a svg:hover {
+            color: #fff;
+        }        
+
+        body.modal-open .broadway-info h1 {
+            color: #9c0000;
+        }
+
+        svg.red-logo,
+        body.modal-open svg.white-logo {
+            display: none;
+            transition: all 0.5s;
+        }  
+
+        body.modal-open svg.red-logo {
+            display: inline-block;
+        }               
+        
+        /* Icons using Unicode/CSS */
+        .icon-play::before { content: "▶"; }
+        .icon-pause::before { content: "❚❚"; }
+        .icon-mute::before { content: "🔇"; }
+        .icon-unmute::before { content: "🔊"; }
+        .icon-replay::before { content: "↻"; font-size: 28px; }
+        
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .broadway-info .logos {
+                margin-right: 7px;
+                width: 20px;
+                height: 20px;
+                top: 3px;
+            }    
+            .broadway-info h1 svg {
+                width: 20px;
+                height: 20px;
+            }                    
+            .broadway-info h1 {
+                font-size: 22px;
+            }
+
+            .signup-btn {
+                font-size: 14px;
+                padding: 7px 20px 1px;
+            }            
+            
+            .landing-content {
+                position: absolute;
+                top: 80px;
+                width: 360px;
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0;
+                z-index: 10;
+            }
+
+            .lbm-video-container {
+                position: relative !important;
+                height: 100% !important;
+                z-index: unset !important;
+            }
+
+            video#lbmBgVideo {
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: none;
+                object-fit: unset;
+                height: 100%;
+                width: 100%;
+                min-width: auto;
+                min-height: auto;
+            }
+
+            .lbm-video-poster {
+                position: relative;
+            }
+
+            .header-content {
+                display: block;
+            }
+
+            .broadway-info {margin-bottom: 8px;}            
+            
+            .video-controls {
+                bottom: 20px;
+                gap: 15px;
+            }
+            
+            .control-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .social-icons {
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+        @media (max-width: 768px) {
+            .lbm-video-container {
+                position: fixed !important;
+                height: 100% !important;
+                z-index: unset !important;
+            }
+
+            video#lbmBgVideo {
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+                transform: none;
+                object-fit: unset;
+                min-width: auto;
+                min-height: auto;                
+            }
+        } 
+        @media (max-width: 450px) {
+            .landing-content {
+            
+                top: 60px;
+            }            
+            .broadway-info h1 {
+                font-size: 16px;
+            }
+            .broadway-info .logos {
+                margin-right: 7px;
+                width: 15px;
+                height: 15px;
+                top: 3px;
+            }    
+            .broadway-info h1 svg {
+                width: 15px;
+                height: 15px;
+            }            
+        }       
+.lbm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
 }
 
-.social-icons a {
-  color: white;
-  font-size: 24px;
-  transition: all 0.5s;
+.lbm-modal-overlay.show {
+    display: flex;
 }
 
-.social-icons a:hover {
-  color: #9c0000;
+.lbm-modal {
+    max-width: 100%;
+    width: 850px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .broadway-info h1 {
-    font-size: 22px;
-  }
-  .signup-btn {
-    font-size: 14px;
-    padding: 7px 20px 1px;
-  }
-  .header-content {
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lbm-modal-close {
+    position: relative;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-left: auto;
     display: block;
-  }
-  .broadway-info {
-    margin-bottom: 8px;
-  }
+    margin-bottom: 30px;
+    line-height: 1 !important;
+    padding-bottom: 6px;
+}
+
+.lbm-modal-close:hover {
+    background: #9c0000;
+    border-color: #9c0000;
+}
+
+#mc_embed_signup_scroll > div {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mc-field-group {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mc-field-group input[type="text"],
+.mc-field-group input[type="email"] {
+    background: rgba(0, 0, 0, 0);
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    width: 100%;
+}
+
+.mc-field-group label {
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "itc-avant-garde-gothic-pro",sans-serif;
+}
+
+
+
+#mc_embed_signup_scroll input#mc-embedded-subscribe {
+    font-family: "itc-avant-garde-gothic-pro", sans-serif;
+    background: #9c0000;
+    padding: 15px 5px;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    max-width: 100%;
+    width: 240px;
+    margin-bottom: 0;
+    border: 0;
+    margin: 0 auto;
+}
+
+#mc_embed_signup_scroll .clear {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+@media (max-width: 768px) {
+    .lbm-modal {
+        padding: 30px 20px;
+    }
 }
