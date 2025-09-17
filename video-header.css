@@ -1,0 +1,298 @@
+/* Hero Video Section Styles */
+.lbm-hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 800px; /* Adjust hero height as needed */
+    overflow: hidden;
+    background: #000;
+}
+
+/* Video Container */
+.lbm-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#lbmBgVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Video Poster */
+.lbm-video-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.lbm-video-poster.show {
+    opacity: 1;
+}
+
+/* Hero Content Overlay */
+.lbm-hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.broadway-info {
+    max-width: 600px;
+}
+
+.broadway-info h1 {
+    font-size: 44px;
+    font-family: "Friz Quadrata Std", sans-serif;
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 20px 0;
+    transition: all 0.5s;
+}
+
+.broadway-info .logos {
+    margin-right: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.broadway-info h1 svg {
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s;
+    vertical-align: middle;
+}
+
+/* Signup Button */
+.signup-btn {
+    cursor: pointer;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 30px;
+    margin-top: 30px;
+    font-size: 18px;
+    display: inline-block;
+    font-family: "Friz Quadrata Std", sans-serif;
+}
+
+.signup-btn:hover {
+    background-color: #9c0000;
+    border-color: #9c0000;
+}
+
+/* Video Controls */
+.lbm-video-controls {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    gap: 15px;
+    z-index: 4;
+}
+
+.lbm-control-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.lbm-control-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.lbm-control-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
+/* Social Icons */
+.social-icons {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    display: flex;
+    gap: 20px;
+    z-index: 4;
+}
+
+.social-icons a {
+    color: white;
+    transition: all 0.5s;
+}
+
+.social-icons a svg {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+}
+
+.social-icons a:hover svg {
+    fill: #9c0000;
+}
+
+/* Modal Styles */
+.lbm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.lbm-modal-overlay.show {
+    display: flex;
+}
+
+.lbm-modal {
+    max-width: 100%;
+    width: 850px;
+    padding: 40px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lbm-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lbm-modal-close:hover {
+    background: #9c0000;
+    border-color: #9c0000;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .lbm-hero-section {
+        height: 80vh;
+        max-height: 600px;
+    }
+    
+    .broadway-info h1 {
+        font-size: 28px;
+    }
+    
+    .broadway-info h1 svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .signup-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    
+    .lbm-hero-content {
+        padding: 20px;
+    }
+    
+    .lbm-video-controls {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+    
+    .social-icons {
+        bottom: 20px;
+        left: 20px;
+    }
+    
+    .lbm-control-btn {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 450px) {
+    .broadway-info h1 {
+        font-size: 22px;
+    }
+    
+    .lbm-hero-section {
+        height: 70vh;
+        max-height: 500px;
+    }
+}
