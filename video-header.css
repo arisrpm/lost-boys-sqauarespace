@@ -3,17 +3,17 @@
 }  
 /* Video Background Styles */
         .video-landing-container {
-            position: fixed;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: auto;
             overflow: hidden;
             z-index: -1;
         }
         
         #bgVideo {
-            position: absolute;
+            position: relative;
             top: 50%;
             left: 50%;
             min-width: 100%;
@@ -26,7 +26,7 @@
         
         /* Poster/Still Image Overlay */
         .video-poster {
-            position: absolute;
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
@@ -48,7 +48,7 @@
             position: relative;
             z-index: 1;
             color: white;
-            padding: 40px;
+            /* padding: 40px; */
             /*min-height: 100vh;*/
             display: flex;
             flex-direction: column;
@@ -145,7 +145,7 @@
         
         /* Video Controls */
         .video-controls {
-            position: fixed;
+            position: absolute;
             bottom: 40px;
             right: 40px;
             display: flex;
@@ -176,7 +176,7 @@
         
         /* Social Icons */
         .social-icons {
-            position: fixed;
+            position: absolute;
             bottom: 40px;
             left: 40px;
             display: flex;
