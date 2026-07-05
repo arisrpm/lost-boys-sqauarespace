@@ -152,6 +152,10 @@
   background-color: #0a0f2d !important;
 }
 
+#tlb-version-two .burger--active .burger-inner>div {
+    background-color: #fff !important;
+}
+
 #tlb-version-two header#header .header-awards-rotator {
   min-height: 105px;
 }
