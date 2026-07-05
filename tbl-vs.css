@@ -114,6 +114,10 @@
   display: none;
 }
 
+#tlb-version-two .name-social h2 {
+    align-items: flex-start;
+}
+
 #tlb-version-two #video-hero::after,
 #tlb-version-two main#page::after {
   display: none;
@@ -312,6 +316,7 @@
 
 #tlb-version-two #footer-sections .newsletter-form-fields-wrapper.form-fields input {
   font-family: 'Optima', sans-serif !important;
+  border: none !important;
 }
 
 #tlb-version-two #footer-sections .newsletter-form-fields-wrapper.form-fields input::placeholder {
