@@ -1,0 +1,326 @@
+/* ========================================
+   HOME V2  —  /home-v2
+   scoped to this page only
+   ======================================== */
+
+#collection-6a45bcbb9a399f297b55c0b4,
+#collection-6a45bcbb9a399f297b55c0b4 .site-wrapper .header-menu .header-menu-bg {
+  background-image: url(https://images.squarespace-cdn.com/content/688ce397c945bf4718d5ae12/246d7fc2-3c93-4d1f-a2c4-f208ce7b5620/tbl-new-bg.jpg);  
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #video-hero {
+    position: relative;
+    padding-top: 134px !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .site-wrapper .header-menu .header-menu-nav a:not(.btn) {
+    font-family: "ITC Serif Gothic Heavy";
+    text-shadow: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h1,
+#collection-6a45bcbb9a399f297b55c0b4 h2 {
+  font-family: "ITC Serif Gothic Heavy";
+  text-shadow: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h3,
+#collection-6a45bcbb9a399f297b55c0b4 h4 {
+  font-family: 'Optima', sans-serif;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2 {
+  position: relative;
+  width: auto;
+}
+
+/* #collection-6a45bcbb9a399f297b55c0b4 h2::before {
+  content: '';
+  display: block;
+  background: #fff;
+  width: 9vw;
+  position: absolute;
+  height: 2px;
+  left: 0;
+  top: 50%;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2::after {
+  content: '';
+  display: block;
+  background: #fff;
+  width: 9vw;
+  position: absolute;
+  height: 2px;
+  top: 50%;
+  right: 0;
+} */
+
+#collection-6a45bcbb9a399f297b55c0b4 h2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1.25rem;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2 {
+  display: flex;
+  flex-direction: column;   /* the two divs stack — no wrap, no br, no hack */
+  align-items: center;
+  text-align: center;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2 > div:first-child,
+#collection-6a45bcbb9a399f297b55c0b4 h2.bottom-line > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  align-self: stretch;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2 > div:first-child::before,
+#collection-6a45bcbb9a399f297b55c0b4 h2 > div:first-child::after {
+  content: "";
+  flex: 1;                  
+  max-width: 12rem;         
+  min-width: 1.8rem;
+  height: 3px;
+  background: #fff;
+}
+
+/* line 2: logo + text, cleanly spaced */
+#collection-6a45bcbb9a399f297b55c0b4 h2 > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4em;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2.bottom-line  > div:last-child::before,
+#collection-6a45bcbb9a399f297b55c0b4 h2.bottom-line  > div:last-child::after {
+  content: "";
+  flex: 1;                  
+  max-width: 12rem;         
+  min-width: 1.8rem;
+  height: 3px;
+  background: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 h2.bottom-line > div:first-child::before,
+#collection-6a45bcbb9a399f297b55c0b4 h2.bottom-line > div:first-child::after {
+  content: "";
+  display: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #video-hero::after,
+#collection-6a45bcbb9a399f297b55c0b4 main#page::after {
+  display: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 p {
+  font-family: 'Optima', sans-serif;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header-display-desktop {
+    column-gap: 1em;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    row-gap: 1em;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header-announcement-bar-wrapper {
+  box-shadow: none;
+  min-height: 105px;
+  --solidHeaderBackgroundColor: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .burger-box {
+  width: 60px !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header-burger {
+  justify-content: flex-start;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .burger-inner>div {
+  background-color: #0a0f2d !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 header#header .header-awards-rotator {
+  min-height: 105px;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header-awards-bottomline.fade-in {
+  font-family: "ITC Serif Gothic Heavy";
+  color: #0a0f2d;
+  text-shadow: none;
+  font-size: 1.8vw;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header_button {
+  display: block;
+  border: none;
+  line-height: 1;
+  padding: 0;
+  margin-left: auto;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header_button a {
+  line-height: 1;
+  text-shadow: none;
+  padding: 12px 20px 14px;
+  border: 1px solid #0a0f2d;
+  font-family: 'Optima', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2vw;
+  text-align: center;
+  color: #0a0f2d;
+  transition: all 0.5s;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .header_button a:hover {
+  background: #0a0f2d;
+  color: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .awards-topline {
+  font-family: 'Optima', sans-serif;
+  text-shadow: none;
+  font-size: 2.6vw;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .awards-bottomline {
+  font-family: "ITC Serif Gothic Heavy";
+  font-size: 1.65vw;
+  color: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #news-container {
+  margin-bottom: 3rem;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .news-content h3 {
+  font-family: "ITC Serif Gothic Heavy";
+  letter-spacing: 0;
+  text-shadow: none;
+  font-size: 27px;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .news-publication {
+  font-family: 'Optima', sans-serif;
+  color: #fff;
+  font-size: 23px;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .news-content a {
+  font-family: 'Optima', sans-serif;
+  color: #fff;
+  font-size: 14px;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 button#load-more-news {
+  line-height: 1;
+  text-shadow: none;
+  padding: 12px 20px;
+  border: 1px solid #0a0f2d;
+  font-family: 'Optima', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #0a0f2d;
+  transition: all 0.5s;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 button#load-more-news:hover {
+  border: 1px solid #fff;
+  background: #0a0f2d;
+  color: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar {
+  gap: 0;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar-legend {
+  font-family: "ITC Serif Gothic Heavy";
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar .day.week {
+  font-family: 'Optima', sans-serif;
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.1vw;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar .day {
+  background: transparent;
+  box-shadow: none;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar .day h4 {
+  color: #fff;
+  text-shadow: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar .day a {
+  color: #fff;
+  font-family: 'Optima', sans-serif;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .calendar .day .bestavail a::before {
+  text-shadow: none;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 .hometiles img,
+#collection-6a45bcbb9a399f297b55c0b4 .news-image img {
+    border-radius: 0;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 a.sqs-block-button-element {
+  font-family: 'Optima', sans-serif;
+  width: 310px !important;
+  padding: 17px 20px 18px !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 a.sqs-block-button-element:hover {
+
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections {
+  background: transparent;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections .newsletter-form-body {
+  background: #1d275e;
+  border: 2px solid #ffff;
+  width: 940px;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections .newsletter-form-fields-wrapper.form-fields {
+  padding: 1rem 0;
+  border-color: #fff;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections .newsletter-form-fields-wrapper.form-fields input {
+  font-family: 'Optima', sans-serif !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections .newsletter-form-fields-wrapper.form-fields input::placeholder {
+  font-family: 'Optima', sans-serif !important;
+}
+
+#collection-6a45bcbb9a399f297b55c0b4 #footer-sections .sqs-block-newsletter .newsletter-form-button {
+  color: #fff !important;
+  font-size: 38px !important;
+  font-family: 'Optima', sans-serif !important;
+  font-weight: normal !important;
+}
