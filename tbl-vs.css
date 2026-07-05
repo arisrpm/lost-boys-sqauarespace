@@ -3,7 +3,7 @@
    scoped to this page only
    ======================================== */
 
-#tlb-version-two,
+#tlb-version-two body,
 #tlb-version-two .site-wrapper .header-menu .header-menu-bg {
   background-image: url(https://images.squarespace-cdn.com/content/688ce397c945bf4718d5ae12/246d7fc2-3c93-4d1f-a2c4-f208ce7b5620/tbl-new-bg.jpg);  
 }
