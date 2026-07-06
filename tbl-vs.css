@@ -404,7 +404,7 @@
     min-height: auto;
   }
   #tlb-version-two .header-awards-bottomline {
-    font-size: 3.5vw;
+    font-size: 3.5vw !important;
   }  
   #tlb-version-two .header_button {
     padding: revert-rule;
