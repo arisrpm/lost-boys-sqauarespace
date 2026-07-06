@@ -144,7 +144,7 @@
 
 #tlb-version-two .header-announcement-bar-wrapper {
   box-shadow: none;
-  min-height: 105px;
+  min-height: 135px;
   --solidHeaderBackgroundColor: #fff;
 }
 
