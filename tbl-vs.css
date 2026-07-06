@@ -369,7 +369,7 @@
   #tlb-version-two .burger-box {
       width: 30px !important;
   }  
-  #tlb-version-two .header-awards-bottomline.fade-in {
+  #tlb-version-two .header-awards-bottomline {
     font-size: 2vw;
   }
 }
@@ -415,4 +415,9 @@
   #tlb-version-two .burger-box {
     width: 30px !important;
   }  
+}
+@media (max-width: 450px) {
+  #tlb-version-two #video-hero {
+    padding-top: 96px !important;
+  }
 }
