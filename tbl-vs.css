@@ -27,19 +27,19 @@
 }
 
 #tlb-version-two .site-wrapper .header-menu .header-menu-nav a:not(.btn) {
-    font-family: "ITC Serif Gothic Heavy";
+    /*font-family: "ITC Serif Gothic Heavy";*/
     text-shadow: none;
 }
 
 #tlb-version-two h1,
 #tlb-version-two h2 {
-  font-family: "ITC Serif Gothic Heavy";
+  /*font-family: "ITC Serif Gothic Heavy";*/
   text-shadow: none;
 }
 
 #tlb-version-two h3,
 #tlb-version-two h4 {
-  font-family: 'Optima', sans-serif;
+  /*font-family: 'Optima', sans-serif;*/
   text-shadow: none;
 }
 
@@ -86,6 +86,18 @@
   font-size: 28px;
 }
 
+@media only screen and (max-width: 835px) {
+  #tlb-version-two #video-hero {
+      padding-top: 109px !important;
+  }  
+}
+
+@media only screen and (max-width: 650px) {
+  #tlb-version-two #video-hero {
+      padding-top: 162px !important;
+  } 
+}
+
 @media only screen and (max-width: 615px) {
   #tlb-version-two #footer-sections p.theatre {
     font-size: 12px;
@@ -93,4 +105,10 @@
   #tlb-version-two #footer-sections>section h2 {
     font-size: 7.25vw !important;
   }  
+}
+
+@media only screen and (max-width: 450px) {
+  #tlb-version-two #video-hero {
+      padding-top: 151px !important;
+  } 
 }
