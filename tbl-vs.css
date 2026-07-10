@@ -58,9 +58,10 @@
 #tlb-version-two .sqs-block-newsletter .newsletter-form-button,
 #tlb-version-two .awards-topline,
 #tlb-version-two .calendar .day .bestavail a::before,
-#tlb-version-two .legend-dot {
-  text-shadow: none;
-  box-shadow: none;
+#tlb-version-two .legend-dot,
+#tlb-version-two .calendar-header #currentMonth {
+  text-shadow: none !important;
+  box-shadow: none !important;
 }
 
 #tlb-version-two .header_button a:hover,
@@ -77,7 +78,12 @@
     vertical-align: text-top;
 }
 
+#tlb-version-two .cast-role {
+  font-family: 'Alte Haas Grotesk Bold' !important;
+}
+
 #tlb-version-two #footer-sections>section h2 {
+  font-family: 'SerifGothic' !important;
   font-size: 4.25vw !important;
   color: #fff !important;
 }
